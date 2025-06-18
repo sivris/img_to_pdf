@@ -20,8 +20,12 @@ def convert(filepath:list):
         # Define the filepath of the pdf file
         save_path = os.path.join(save_directory, f'image_{timestamp}.pdf')
 
+        # Save images to pdf file
         images[0].save(save_path, save_all=True, append_images=images[1:])
 
     except Exception as e:
         print(e)
         return False
+
+def create_pdf():
+    pass
